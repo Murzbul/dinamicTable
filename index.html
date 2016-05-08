@@ -45,7 +45,14 @@
 
          dinamicTable.dump(); document.writeln("<br>");
 
-         /*dinamicTable.setFilter();*/
+         dinamicTable.setItemCell(2,2, "Hi");
+         dinamicTable.setItemCell(2,3, "World");
+
+         dinamicTable.dump(); document.writeln("<br>");
+
+         dinamicTable.addItems(["51","52","53","54"]);
+
+         dinamicTable.dump(); document.writeln("<br>");
 
       </script>
 

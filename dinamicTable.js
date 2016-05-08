@@ -179,9 +179,17 @@ DinamicTable.prototype.getActualRow = function()
 
 DinamicTable.prototype.getItemCell = function( pos_row, pos_col )
 {
-      if( pos_col < this.col && pos_row < this.row )
+      if( pos_col <= this.col && pos_row <= this.row )
       {
-          return this.rep[pos_row][pos_col];
+          return this.rep[pos_row-1][pos_col-1];
+      }
+};
+
+DinamicTable.prototype.setItemCell = function( pos_row, pos_col, item )
+{
+      if( pos_col <= this.col && pos_row <= this.row )
+      {
+          this.rep[pos_row-1][pos_col-1] = item;
       }
 };
 
