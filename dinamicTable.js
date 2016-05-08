@@ -271,17 +271,13 @@ DinamicTable.prototype.removeColumn = function( position )
 {
       if ( !this.isEmpty() )
       {
-          this.rep.splice(position-1,1);
-          this.col--;
-          this.actualCol = this.row;
-
-          for (var i = 0; i < rep.length; i++)
+          for (var row = 0; row < this.row; row++)
           {
-              for (var i = 0; i < rep.length; i++)
-              {
-                  rep[i]
-              }
+              this.rep[row].splice(position-1,1);
           }
+
+          this.col--;
+          this.actualCol = this.col;
       }
       else
       {
