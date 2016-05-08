@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dinamic Table</title>
+  </head>
+  <body>
+    <script src="../dinamicTable/dinamicTable.js" charset="utf-8"></script>
+
+    <script>
+
+         var dinamicTable = new DinamicTable();
+
+         dinamicTable.addItem("11");
+         dinamicTable.addItem("12");
+         dinamicTable.addItem("13");
+         dinamicTable.addItem("14");
+         dinamicTable.addItem("21");
+         dinamicTable.addItem("22");
+         dinamicTable.addItem("23");
+         dinamicTable.addItem("24");
+         dinamicTable.addItem("31");
+         dinamicTable.addItem("32");
+         dinamicTable.addItem("33");
+         dinamicTable.addItem("34");
+
+         dinamicTable.dump();
+
+         document.writeln("<br>");
+
+         dinamicTable.addCol(1);
+         dinamicTable.addItemAt(1,5,"15");
+         dinamicTable.addItemAt(2,5,"25");
+         dinamicTable.addItemAt(3,5,"35");
+
+         dinamicTable.addItems(new Array("41","42","43","44","45"));
+
+         dinamicTable.dump(); document.writeln("<br>");
+
+         dinamicTable.removeRow(3);
+
+         dinamicTable.dump();
+
+         /*dinamicTable.setFilter();*/
+
+      </script>
+
+   </head>
+
+   <body>
+   </body>
+
+</html>
